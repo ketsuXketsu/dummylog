@@ -9,11 +9,11 @@ import (
 
 // dummylog base struct
 type Logger struct {
-	outputDir string
+	OutputDir string
 }
 
 func LogBase(l *Logger) (*os.File, error) {
-	logFilePath := filepath.Join(l.outputDir, "logs")
+	logFilePath := filepath.Join(l.OutputDir, "logs")
 	err := os.MkdirAll(logFilePath, os.ModePerm)
 	if err != nil {
 		panic(err)
